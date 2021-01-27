@@ -1,16 +1,9 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import { vuexfireMutations } from "vuexfire";
-
-import actions from "./actions";
-import mutations from "./mutations";
 import { config } from "../config";
 
 Vue.use(Vuex);
-
-// Should I put right off the bat Data collection here or in firebase/
-//   I like here better
 
 export default new Vuex.Store({
   state: {
@@ -26,23 +19,13 @@ export default new Vuex.Store({
       show_snackbar: false,
       snackbar: {
         text: "",
-        multiLine: true,
         timeout: 5000, // -1 = Never (miliseconds)
-        value: "",
-        absolute: true,
-        centered: false, // Vertically
-        vertical: false, // Taller
         color: "primary",
-        elevation: 24
       }
     },
 
-    // These variable should be in the cloud
     _site: {},
 
-    // Everything here is needed for the site possibly
-    //  before the cloud variables are recieved
-    config: config,
     user: {
       email: "",
       password: "",
@@ -56,10 +39,7 @@ export default new Vuex.Store({
     }
   },
   getters: {},
-  mutations: {
-    ...mutations,
-    ...vuexfireMutations
-  },
+  mutations: {},
   actions: actions,
   modules: {}
 });
