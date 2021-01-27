@@ -1,0 +1,8 @@
+{
+  "projects": {
+    // to use:
+    //   firebase use staging
+    "production": "vue-firebase-temp",
+    "staging": "vue-firebase-temp"
+  }
+}
