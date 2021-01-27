@@ -2,6 +2,9 @@ import fb from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 
+//https://firebase.google.com/docs/web/setup#node.js-apps 
+//  Initialize the cloud db to get variables and to copy data,
+//  And then Use the emulator db in test
 import { firebaseConfig } from "../config";
 
 // Initialize Firebase

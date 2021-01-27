@@ -5,10 +5,7 @@ import router from "../router";
 
 export default {
   // This function moves the Variables Collection into the store.state,
-  //   But I think I want to do this, and I'll   store.state.site = { ...store.state.site, ...variables.site }
-  //    variables /
-  //          site /
-  //          etc. /
+  // _site is different than 'site'
   AppVueGet: firestoreAction(({ bindFirestoreRef }) => {
     // Use .where() to filter out documents that contain un-needed and secret info
     return varsRef
@@ -23,6 +20,7 @@ export default {
       });
     } else {
       commit("logout");
+      // unbindFirestoreRef("user");
     }
   }),
   refreshUser: firestoreAction(({ state, bindFirestoreRef }) => {
