@@ -1,6 +1,15 @@
-import { fb, auth } from "../firebase";
-// import functions from "../firebase/functions";
+import server from "../plugins/server";
 import router from "../router";
+
+
+/**
+ * Use `server` to make requests to the backend. 
+ * using axios, you will have already provided the BASE_URL and the userID
+ * so requests from here can just look like this.
+ * 
+ * let resp = await server.get("/get-user-info");
+ * user = resp.data     or      user = resp.data.user
+ */
 
 export default {
   // When authentication changes from logged in ( user = user_object ), to logged out ( user = null )
