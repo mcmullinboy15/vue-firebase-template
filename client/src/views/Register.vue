@@ -45,21 +45,38 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn
-              color="primary"
-              min-width="100px"
-              @click="submitRegister"
-              v-text="'Register'"
-            ></v-btn>
+            <v-row>
+              <v-col>
+                <v-btn
+                  color="primary"
+                  min-width="100px"
+                  @click="submitRegister"
+                  v-text="'Register'"
+                ></v-btn>
+              </v-col>
 
-            <v-spacer></v-spacer>
+              <v-spacer></v-spacer>
+              
+              <v-col>
+                <v-btn
+                  text
+                  color="primary"
+                  :to="{ name: 'Login' }"
+                  v-text="'Already have an Account'"
+                ></v-btn>
+              </v-col>
 
-            <v-btn
-              text
-              color="primary"
-              :to="{ name: 'Login' }"
-              v-text="'Already have an Account'"
-            ></v-btn>
+              <v-spacer></v-spacer>
+              
+              <v-col>
+                <v-img
+                  max-width="200px"
+                  @click="signInWithGoogle"
+                  alt=" Sign in with Google"
+                  src="../assets/google_signin_buttons/web/1x/btn_google_signin_dark_pressed_web.png"
+              />
+              </v-col>
+            </v-row>
           </v-card-actions>
         </v-card>
       </v-container>
@@ -89,6 +106,7 @@ export default {
       required: value => !!value || "Required",
       min: v => v.length >= 8 || "Min 8 characters"
     },
+    
     msg: {
       header: "Welcome",
       message: {

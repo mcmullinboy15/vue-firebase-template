@@ -14,7 +14,7 @@
         active-class="primary--text"
         multiple
       >
-        <template v-for="(item, index) in items">
+        <template v-for="(item, index) in user.notifications">
           <v-list-item :key="item.title">
             <template v-slot:default="{ active }">
               <v-list-item-content>
@@ -46,7 +46,7 @@
             </template>
           </v-list-item>
 
-          <v-divider v-if="index < items.length - 1" :key="index"></v-divider>
+          <v-divider v-if="index < user.notifications.length - 1" :key="index"></v-divider>
         </template>
       </v-list-item-group>
     </v-list>
@@ -54,45 +54,14 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "Notifications",
   data: () => ({
     selected: [2],
-    items: [
-      {
-        action: "15 min",
-        headline: "Brunch this weekend?",
-        subtitle: `I"ll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
-        title: "Ali Connors"
-      },
-      {
-        action: "2 hr",
-        headline: "Summer BBQ",
-        subtitle: `Wish I could come, but I"m out of town this weekend.`,
-        title: "me, Scrott, Jennifer"
-      },
-      {
-        action: "6 hr",
-        headline: "Oui oui",
-        subtitle: "Do you have Paris recommendations? Have you ever been?",
-        title: "Sandra Adams"
-      },
-      {
-        action: "12 hr",
-        headline: "Birthday gift",
-        subtitle:
-          "Have any ideas about what we should get Heidi for her birthday?",
-        title: "Trevor Hansen"
-      },
-      {
-        action: "18hr",
-        headline: "Recipe to try",
-        subtitle:
-          "We should eat this: Grate, Squash, Corn, and tomatillo Tacos.",
-        title: "Britta Holt"
-      }
-    ]
-  })
+  }),
+  computed: mapState(["user"])
 };
 </script>
 

@@ -1,8 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import { config } from "../config";
-
-import { auth } from "../firebase";
+import store from "../store";
 
 Vue.use(VueRouter);
 
@@ -78,11 +76,11 @@ const router = new VueRouter({
 // navigation guard to check for logged in users
 router.beforeEach((to, from, next) => {
   // Updates the title to the Name of the Component you're navigating to
-  document.title = to.name + ` - ${config.projectName}`;
+  document.title = to.name + ` - ${store.state.config.projectName}`;
 
   const requiresAuth = to.matched.some(x => x.meta.requiresAuth);
 
-  if (requiresAuth && !auth.currentUser) {
+  if (requiresAuth && !store.state.site.loggedIn) {
     next({ name: "Login" });
   } else {
     next();
