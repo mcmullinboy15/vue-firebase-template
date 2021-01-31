@@ -1,17 +1,13 @@
-# How to recreate this template, and where I got the code
-## Intro
-The following project is not a course but also is not a simple bug fix or solution to common questions. This is everything that I've learned while building many websites while using a Vue and Vuetify frontend and a Fireabse (server-less) Backend.
-
-Therefore there are many things you'll need for `setup only` and many skills you'll need to use `everyday` in your development. I will be tagging the important parts with the tags like this:
-> **SETUP SKILL**
-
-> **EVERYDAY SKILL**
-
-in order for you to know that the skill following, will benefit you and/or should be memorized.
+# Intro
+This is a lot of what I've learned building many websites while using a Vue, vuex and Vuetify frontend.
 
 <br>
 
 # Local Setup
+
+## Clone this repo ( Branch Vue-01 ) or follow these steps
+      https://github.com/mcmullinboy15/vue-firebase-template.git
+
 ## Go to the terminal or cmd on your Personal Computer
 
   * Nagivate to your project directory `Projects/[vue-firebase-template]` and create a web directory
@@ -53,15 +49,11 @@ in order for you to know that the skill following, will benefit you and/or shoul
 # References
 * https://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase
 * https://github.com/savvyapps/SAVuegram
+
+# Things to go over
 * Vue
   * how components can work (.vue)
   * data, computed, methods
   * vuex, all needed map...
   * router
   * axios
-
-
-
-
-
-setup all pages, with `vuetify` using `vuex`  just not as complex
