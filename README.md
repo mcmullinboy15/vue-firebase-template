@@ -100,7 +100,7 @@ npm install --save vuetify
 
 ```
 
-# My TODOs:
+# My Future Things to add (TODOs):
 #### I want to create explainations of all these
 * Firebase
 
