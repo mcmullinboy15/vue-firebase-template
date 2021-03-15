@@ -88,8 +88,7 @@ in order for you to know that the skill following, will benefit you and/or shoul
 
       * `Remote Config` is a neat ability to configure your application and change things without having to redeploy
 
-## Creating Vue App
-1. 
+ 
 ## Things to install if you're not using my template
 
 ```
